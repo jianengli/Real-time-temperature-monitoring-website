@@ -4,14 +4,7 @@ A real-time temperature monitoring website based on Raspberry Pi, temperature se
 
 - [Background](#background)
 - [Install](#install)
-- [Usage](#usage)
-	- [Generator](#generator)
-- [Badge](#badge)
-- [Example Readmes](#example-readmes)
-- [Related Efforts](#related-efforts)
 - [Maintainers](#maintainers)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Background
 This is an assignment from IK2018:https://www.du.se/en/study-at-du/kurser/course/?code=IK2018
@@ -19,3 +12,6 @@ An imagined this case: You have a mountain cabin and are afraid that the indoor 
 
 ## Install
 In this project, you need hardware: Raspberry Pi, temperature sensor and you also need to install Python 3, php and html5
+
+## Maintainers
+[@Jianeng](https://github.com/tommyLi66).
