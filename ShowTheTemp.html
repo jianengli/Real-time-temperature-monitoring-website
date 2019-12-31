@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/oldie.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+</head>
+
+<body>
+    <!-- <pre id="x">Initializing...</pre> -->
+    <div id="container" style="max-width:800px;height:400px"></div>
+    <h1>The following presents the last added data:</h1>
+    <div id="info"></div>
+	<div id="test"></div>
+    <script>
+
+		var curJSON = "";
+		var pastJSON = "";
+	
+        var source = new EventSource("http://130.243.35.86/lab5/getLastestTemp.php");
+        source.onmessage = function(event){
+            document.getElementById("info").innerHTML = event.data;
+			
+			$.getJSON("http://130.243.35.86/lab5/getAllTemp.php").done(function (jsonData) {
+				curJSON = JSON.stringify(jsonData);
+				if(curJSON.localeCompare(pastJSON)!=0){
+					createChart(jsonData);
+				}
+				pastJSON = curJSON;
+			});
+        }
+		
+        function createChart(jsonData) {
+            //skapar en array f�r datum och tid
+            $times = [];
+            $temperature = [];//en array f�r antal bilar[3, 5, 5, 7]
+            //loopar jsondata med each
+            $.each(jsonData, function (idx, data) {
+                //det som ska visas som kategori p� x-axeln
+                var datumtid = data.date + " " + data.time;
+                $times.push(datumtid);
+                //l�gger till i arrayen det data som ska visas p� y-axeln	
+                $temperature.push(parseInt(data.temperature));
+            });
+            //skapar diagram div:en fran http://www.highcharts.com/demo/line-basic tryck p� knappen til jsfiddle f�r kod exempel
+            $('#container').highcharts({
+                title: {
+                    text: 'The temperature detected by the sensor',
+                    x: -20 //center
+                },
+                xAxis: {
+                    categories: $times
+                },
+                yAxis: {
+                    title: {
+                        text: 'the temperature'
+                    },
+                },
+                tooltip: {
+                    valueSuffix: ' st'
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle',
+                    borderWidth: 0
+                },
+                series: [{
+                    name: 'The temperature',
+                    data: $temperature
+                }]
+            });//end container.highcharts()
+        }
+    </script>
+</body>
+</html>
