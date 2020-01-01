@@ -4,6 +4,7 @@ A real-time temperature monitoring website based on Raspberry Pi, temperature se
 
 - [Background](#background)
 - [LiveDemo](#livedemo)
+- [Data flow model](#data-flow-model)
 - [Prerequisites](#prerequisites)
 - [Running The Tests](#running-The-Tests) 
 - [Maintainers](#maintainers)
@@ -15,6 +16,9 @@ An imagined this case: You have a mountain cabin and are afraid that the indoor 
 
 ## LiveDemo
 - [Live demo](http://users.du.se/~h19jiali/Github_video/live_demo.mp4)
+
+## Data flow model
+- [How the data transfered?](http://users.du.se/~h19jiali/Github_video/live_demo.mp4)
 
 ## Prerequisites
 In this project, you need hardware: Raspberry Pi, temperature sensor and you also need to install Python 3, php and html5.
@@ -33,4 +37,4 @@ Read more about the above in https://docs.devicehive.com/docs/raspberry-pi-and-t
 3. Finally, open 130.243.35.86/lab5/ShowTheTemp.html through the browser and run obtainWeatherInfo.py, we can see that highchart updates the temperature data every 5 minutes. At the same time, in the temperature center, we can receive an email if the sensor fails
 
 ## Maintainers
-[@Jianeng](https://github.com/tommyLi66).
+[@Jianeng](https://github.com/jianengli).
