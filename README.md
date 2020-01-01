@@ -27,10 +27,10 @@ In this project, you need hardware: Raspberry Pi, temperature sensor and you als
 2. Change the config file so we can use the tempratur sensor.
 Read more about the above in https://docs.devicehive.com/docs/raspberry-pi-and-temperature-sensor.
 
-## RunningTheTests
-First, connect the Raspberry Pi to the temperature sensor and turn on the power.
-Second, put the code in www directory.
-Finally, open 130.243.35.86/lab5/ShowTheTemp.html through the browser and run obtainWeatherInfo.py, we can see that highchart updates the temperature data every 5 minutes. At the same time, in the temperature center, we can receive an email if the sensor fails
+## Running The Tests
+1. First, connect the Raspberry Pi to the temperature sensor and turn on the power.
+2. Second, put the code in www directory.
+3. Finally, open 130.243.35.86/lab5/ShowTheTemp.html through the browser and run obtainWeatherInfo.py, we can see that highchart updates the temperature data every 5 minutes. At the same time, in the temperature center, we can receive an email if the sensor fails
 
 ## Maintainers
 [@Jianeng](https://github.com/tommyLi66).
