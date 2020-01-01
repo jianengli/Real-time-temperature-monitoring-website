@@ -5,7 +5,7 @@ A real-time temperature monitoring website based on Raspberry Pi, temperature se
 - [Background](#background)
 - [LiveDemo](#livedemo)
 - [Prerequisites](#prerequisites)
-- [Running The Tests](#running The Tests) 
+- [Running The Tests](#running-The-Tests) 
 - [Maintainers](#maintainers)
 
 ## Background
