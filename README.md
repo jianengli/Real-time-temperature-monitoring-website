@@ -1,5 +1,5 @@
 # Real time temperature monitoring website
-A real-time temperature monitoring website based on Raspberry Pi, temperature sensor, Python, PHP and html5
+A real-time temperature monitoring website based on Raspberry Pi, temperature sensor, Python, PHP and html5. Besides, it can predict the trend of local temperature changes in the next 3 hours.
 ## Table of Contents
 
 - [Background](#background)
