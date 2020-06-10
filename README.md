@@ -18,7 +18,7 @@ An imagined this case: You have a mountain cabin and are afraid that the indoor 
 - [Live demo](http://users.du.se/~h19jiali/Github_video/live_demo.mp4)
 
 ## Data flow model
-- [How the data transfered?](https://github.com/jianengli/Real-time-temperature-monitoring-website/blob/master/data%20flow%20model.png)
+- [How the data transfered?](https://github.com/jianengli/Real-time-temperature-monitoring-website/blob/master/data%20flow%20model.jpg)
 
 ## Prerequisites
 In this project, you need hardware: Raspberry Pi, temperature sensor and you also need to install Python 3, php and html5.
